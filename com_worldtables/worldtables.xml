@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="component" version="2.5" method="upgrade">
-    <name>com_worldtables</name>
+    <name>WorldTables</name>
+    <creationDate>October 2012</creationDate>
+    <author>Reinhard Schroeckelsberger</author>
+    <authorEmail>schroeckelsberger@bluesteps.at</authorEmail>
+    <authorUrl>http://www.bluesteps.at</authorUrl>
+    <version>0.0.1</version>
+    <description>Showing all Soccer Tables of Upperaustria since 1945</description>
+    
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+        </sql>
+    </install>
+    
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+    
+    
+    <files folder="site">
+                <filename>index.html</filename>
+                <filename>worldtables.php</filename>
+    </files>
+        
     <administration>
-        <menu img="class:component">WorldTables</menu>
+        <menu img="class:component">World Tables</menu>
+        <files folder="admin">
+            <!-- Admin Main File Copy Section -->
+            <filename>index.html</filename>
+            <filename>worldtables.php</filename>
+            <!-- SQL files section -->
+            <folder>sql</folder>
+        </files>
     </administration>
 </extension>
 
