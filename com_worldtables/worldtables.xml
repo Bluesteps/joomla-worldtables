@@ -27,7 +27,7 @@
     </files>
         
     <administration>
-        <menu img="class:component">World Tables</menu>
+        <menu img="class:component">com_worldtables</menu>
         <files folder="admin">
             <!-- Admin Main File Copy Section -->
             <filename>index.html</filename>
@@ -35,6 +35,9 @@
             <!-- SQL files section -->
             <folder>sql</folder>
         </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB.com_worldtables.ini</language>
+        </languages>
     </administration>
 </extension>
 

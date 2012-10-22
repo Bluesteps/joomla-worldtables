@@ -68,16 +68,15 @@
                <mkdir dir="${builddir}/${NAME}/admin"/>
                <mkdir dir="${builddir}/${NAME}/admin/sql"/>
                <mkdir dir="${builddir}/${NAME}/media"/>
-               <mkdir dir="${builddir}/${NAME}/language"/>
-               <mkdir dir="${builddir}/${NAME}/language/admin"/>
-               <mkdir dir="${builddir}/${NAME}/language/site"/>
+               <mkdir dir="${builddir}/${NAME}/admin/language"/>
+               <mkdir dir="${builddir}/${NAME}/site/language"/>
                <copy todir="${builddir}/${NAME}/media" overwrite="true" verbose="${verbose}" failonerror="false">
                        <fileset dir="${source}/media/${NAME}"/>
                </copy>
                <copy todir="${builddir}/${NAME}/admin" overwrite="true" verbose="${verbose}">
                        <fileset dir="${source}/administrator/components/${NAME}"/>
                </copy>
-               <copy todir="${builddir}/${NAME}/language/admin" overwrite="true" verbose="${verbose}" flatten="true">
+               <copy todir="${builddir}/${NAME}/admin/language" overwrite="true" verbose="${verbose}" flatten="true">
                        <fileset dir="${source}/administrator/language">
                                <exclude name="overrides/*"/>
                                <exclude name="pdf_fonts/*"/>
@@ -87,7 +86,7 @@
                <copy todir="${builddir}/${NAME}/site" overwrite="true" verbose="${verbose}">
                        <fileset dir="${source}/components/${NAME}"/>
                </copy>
-               <copy todir="${builddir}/${NAME}/language/site" overwrite="true" verbose="${verbose}" flatten="true">
+               <copy todir="${builddir}/${NAME}/site/language" overwrite="true" verbose="${verbose}" flatten="true">
                        <fileset dir="${source}/language">
                                <exclude name="overrides/*"/>
                                <exclude name="pdf_fonts/*"/>
